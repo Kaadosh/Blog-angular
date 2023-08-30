@@ -1,0 +1,10 @@
+<div class="w-1/2 mx-auto py-6">
+    <h2 class="text-black text-center font-bold text-2xl">All Posts</h2>
+    <ul class="space-y-4" *ngFor="let posts of PostsList | async">
+        <li class=" rounded-lg p-4">
+            <a [routerLink]="['post', posts.id]" class="block text-amber-50 hover:underline">
+                {{posts.title}}
+            </a>
+        </li>
+    </ul>
+</div>
